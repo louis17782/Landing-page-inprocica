@@ -1,0 +1,131 @@
+---
+const {images, title, textB, buttomA, buttomB} = Astro.props;
+import logo from "../assets/image/logo.png";
+---
+
+<header id="home">
+  <div id="slider">
+    {images.map((image) => (
+      <img src={image} alt="Slider image" />
+    ))}
+  </div>
+  <h1 id="main-title">
+    <a href="/"><img class="logo" src={logo.src} alt="logo"></a>
+    {title}
+    <span></span>
+    <div class="button-container">
+      <button class="primarybutton">
+        <a href="#projects">{buttomA}</a>
+      </button>
+      <button class="transparent">
+        <a href="#contact">{buttomB}</a>
+      </button>
+    </div>
+  </h1>
+</header>
+
+<style lang="scss">
+  @use '../assets/sass/index' as *;
+
+  .logo {
+    position: absolute;
+    width: 100px;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+
+  header {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 402 / 300;
+    overflow: hidden;
+  }
+
+  #slider {
+    display: flex;
+    width: 400%; // cantidad de img
+    height: 100%;
+    transform: translateX(0);
+    transition: transform 0.5s;
+  }
+
+  h1 {
+    @include center-contents;
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    padding-left: 5%;
+    padding-top: 70px;
+    margin: 0;
+    background: linear-gradient(to bottom, rgba($black, 40%), rgba($black, 80%));;
+    transition: background-color 0.3s;
+    font-family: $heading;
+    font-weight: $bold;
+    font-size: 1.5rem;
+    line-height: 0.5;
+  }
+
+  span {
+    font-size: 1rem;
+    font-weight: $regular;
+    font-family: $text;
+    color: $white;
+    margin: 30px 0;
+    line-height: 1.5;
+  }
+
+  img {
+    width: calc(100% / 4);
+    aspect-ratio: 402 / 300;
+  }
+
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 4rem;
+    }
+
+    h1 .logo {
+      display: none;
+    }
+
+    header {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1440 / 700;
+      overoflow-x: hidden;
+      overflow: hidden;
+    }
+
+    span {
+      font-size: 1rem;
+      font-weight: $regular;
+      font-family: $text;
+      color: $white;
+      margin: 40px 0;
+    }
+  }
+</style>
+
+<script>
+
+  let currentPosition = 1;
+
+  const slide = () => {
+    const slider = document.getElementById('slider');
+    slider.style.transform = `translateX(${-100 * currentPosition / 4}%)`;
+
+    if (currentPosition === 3) {
+      currentPosition = 0;
+    } else {
+      currentPosition++;
+    }
+  }
+
+  setInterval(slide, 5000);
+</script>
