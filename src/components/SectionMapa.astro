@@ -1,0 +1,31 @@
+---
+import map from '../assets/image/mapa.png';
+---
+
+<section>
+	<div>
+    <h2>TITULO2</h2>
+    <div class="underline"></div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, impedit!</p>
+	</div>
+	<img src={map.src} alt="map">
+</section>
+
+<style lang="scss">
+	@use '../assets/sass/index' as *;
+
+	section {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		margin: 0 auto; 
+		max-width: 400px;
+		padding: 40px 0;
+
+		img {
+				width: 100%;
+		}
+	}
+</style>

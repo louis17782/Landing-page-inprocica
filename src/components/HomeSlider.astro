@@ -12,11 +12,8 @@ import logo from "../assets/image/logo.png";
   <h1 id="main-title">
     <a href="/"><img class="logo" src={logo.src} alt="logo"></a>
     {title}
-    <span></span>
+    <p>suministros industriales</p>
     <div class="button-container">
-      <button class="primarybutton">
-        <a href="#projects">{buttomA}</a>
-      </button>
       <button class="transparent">
         <a href="#contact">{buttomB}</a>
       </button>
@@ -63,21 +60,20 @@ import logo from "../assets/image/logo.png";
     padding-left: 5%;
     padding-top: 70px;
     margin: 0;
-    background: linear-gradient(to bottom, rgba($black, 40%), rgba($black, 80%));;
+    background: linear-gradient(to bottom, rgba($black, 70%), rgba($black, 70%));;
     transition: background-color 0.3s;
     font-family: $heading;
     font-weight: $bold;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 0.5;
   }
 
-  span {
-    font-size: 1rem;
+  p {
+    font-size: 1.2rem;
     font-weight: $regular;
     font-family: $text;
     color: $white;
     margin: 30px 0;
-    line-height: 1.5;
   }
 
   img {
