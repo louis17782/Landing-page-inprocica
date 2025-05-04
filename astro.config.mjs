@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://venezolanadeacero.netlify.app/",
+  site: "http://localhost:4321/",
   prefetch: true,
   vite: {
     css: {
@@ -17,8 +17,8 @@ export default defineConfig({
     }
   },
   image: {
-    // Used for all `<Image />` and `<Picture />` components unless overridden
-    experimentalLayout: 'responsive',
+    // Usar un valor válido para experimentalLayout
+    experimentalLayout: 'constrained',
   },
   experimental: {
     responsiveImages: true,
