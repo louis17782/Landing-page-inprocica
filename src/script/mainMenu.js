@@ -40,7 +40,7 @@ projects.forEach(project => {
 });
 
 // Close menu after navigation 
-const navLinks = document.querySelectorAll('.navlinks a[href="#home"], .navlinks a[href="#about"], .navlinks a[href="#ivs"], .navlinks a[href="#projects"], .navlinks a[href="#contact"]');
+const navLinks = document.querySelectorAll('.navlinks a[href="#home"], .navlinks a[href="#about"], .navlinks a[href="#services"], .navlinks a[href="#supplies"], .navlinks a[href="#contact"]');
 
 function closeMenuAfterNavigation() {
   document.querySelector('.blur-background').classList.remove('active');
