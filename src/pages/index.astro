@@ -1,22 +1,23 @@
 ---
 import slide1 from "../assets/image/image1.webp";
-import slide2 from "../assets/image/image3.webp";
-import slide3 from "../assets/image/image4.webp";
-import slide4 from "../assets/image/image20.webp";
+import slide2 from "../assets/image/image2.webp";
+import slide3 from "../assets/image/image3.webp";
+import slide4 from "../assets/image/image4.webp";
 import HomeSlider from "../components/HomeSlider.astro";
 import SectionBox from "../components/SectionBox.astro";
 import Footer from "../components/Footer.astro";
 import EnglishLayout from "../layouts/EnglishLayout.astro";
 import Secondsection from "../components/Secondsection.astro";
 import SectionMapa from "../components/SectionMapa.astro";
+import Form from "../components/Form.astro";
 ---
 
 <EnglishLayout title="Venezolana de acero">
 	<HomeSlider images={[slide1.src, slide2.src, slide3.src, slide4.src]}
 	title="INPROCICA INTERNATIONAL LLC"
-	textB="SUMINISTROS DE  PRODUCTOS INDUSTRIALES"
-	buttomA="Leer más"
-	buttomB="Contactanos"/>
+	textB="SUPPLIES OF INDUSTRIAL PRODUCTS"
+	buttomA="See more"
+	buttomB="Contact us"/>
 	<Secondsection />
 	<SectionBox
 	 titleA="contenido1"
@@ -24,7 +25,18 @@ import SectionMapa from "../components/SectionMapa.astro";
 	 titleC="contenido3"
 	/>
 	<SectionMapa />
-	<Footer />
+	<Form
+	title="Contact us"
+	text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, impedit!"
+	name="Your name"
+	email="Your email"
+	textarea="Text a message"
+	button="Send" />
+	<Footer
+	title1="CONTACT US"
+	title2="MAP"
+	text1="EMAIL US" 
+	/>
 </EnglishLayout>
 <script>
 	import "../script/mainMenu";

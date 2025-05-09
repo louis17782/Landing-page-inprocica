@@ -57,15 +57,15 @@ import logo from "../assets/image/logo.png";
   }
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: $bold;
     font-family: $heading;
     color: $black;
-    margin: 0 0%;
+    margin: 0 5%;
   }
 
   h3 {
-    font-size: 2rem;
+    font-size: 1.25rem;
     font-family: $heading;
     font-weight: $bold;
     color: $black;
@@ -80,20 +80,20 @@ import logo from "../assets/image/logo.png";
   }
   
   .underline {
-    width: 100%;
+    width: 20%;
     height: 2px;
-    background-color: $green;
+    background-color: $grey;
     justify-content: left;
     border-radius: 2px;
-    margin: 0 0 50px; 
+    margin: 0 5% 20px; 
   }
   
   p {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-family: $heading;
     font-weight: $regular;
     color: $white;
-    margin:10px 5%; 
+    margin:0 5%; 
   }
 
   a {
@@ -153,4 +153,30 @@ import logo from "../assets/image/logo.png";
   .transparent:hover {
     background-color: rgba(#434141, 50%);
   }
+
+  h2 {
+  font-size: 1.5rem; // Tamaño base para móviles
+  font-weight: $bold;
+
+  @media (min-width: 768px) {
+    font-size: 2rem; // Tamaño para tabletas
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 2.5rem; // Tamaño para pantallas grandes
+  }
+}
+
+h3 {
+  font-size: 1.25rem; 
+  font-weight: $regular;
+
+  @media (min-width: 768px) {
+    font-size: 1.75rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 2rem; 
+  }
+}
 </style>

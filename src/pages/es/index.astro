@@ -1,26 +1,42 @@
 ---
 import slide1 from "../../assets/image/image1.webp";
-import slide2 from "../../assets/image/image3.webp";
-import slide3 from "../../assets/image/image4.webp";
-import slide4 from "../../assets/image/image20.webp";
+import slide2 from "../../assets/image/image2.webp";
+import slide3 from "../../assets/image/image3.webp";
+import slide4 from "../../assets/image/image4.webp";
 import HomeSlider from "../../components/HomeSlider.astro";
 import SectionBox from "../../components/SectionBox.astro";
 import Footer from "../../components/Footer.astro";
 import SpanishLayout from "../../layouts/SpanishLayout.astro";
+import SectionMapa from "../../components/SectionMapa.astro";
+import Form from "../../components/Form.astro";
+import Secondsection from "../../components/Secondsection.astro";
 ---
 
 <SpanishLayout title="Venezolana de acero">
 	<HomeSlider images={[slide1.src, slide2.src, slide3.src, slide4.src]}
-	title="VENEZOLANA DE ACERO"
-	textB="DISTRIBUIDOR DE PRODUCTOS SIDERURGICOS"
-	buttomA="Leer más"
+	title="INPROCICA INTERNATIONAL LLC"
+	textB="SUMINISTROS DE PRODUCTOS INDUSTRIALES"
+	buttomA="Ver más"
 	buttomB="Contactanos"/>
+	<Secondsection />
 	<SectionBox
 	 titleA="contenido1"
 	 titleB="contenido2"
 	 titleC="contenido3"
 	/>
-	<Footer />
+	<SectionMapa />
+	<Form
+	title="CONTACTANOS"
+	text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, impedit!"
+	name="Tu nombre"
+	email="Tu correo"
+	textarea="Escribe un mensaje"
+	button="Enviar" />
+	<Footer
+	title1="CONTACTANOS"
+	title2="MAPA"
+	text1="CORREO" 
+	/>
 </SpanishLayout>
 <script>
 	import "../../script/mainMenu";
