@@ -15,30 +15,42 @@ import Form from "../components/Form.astro";
 <EnglishLayout title="Venezolana de acero">
 	<HomeSlider images={[slide1.src, slide2.src, slide3.src, slide4.src]}
 	title="INPROCICA INTERNATIONAL LLC"
-	textB="SUPPLIES OF INDUSTRIAL PRODUCTS"
+	textB="SUPPLY OF INDUSTRIAL PRODUCTS"
 	buttomA="See more"
 	buttomB="Contact us"/>
-	<Secondsection />
+	<Secondsection
+	title1="THE COMPANY"
+	text1=" With over 18 years of experience, we are a global company committed to excellence and innovation in industrial solutions. Our trajectory has allowed us to stand out in the sector, providing high-quality products and services that drive growth and development internationally." />
 	<SectionBox
-	 titleA="contenido1"
-	 titleB="contenido2"
-	 titleC="contenido3"
+		titleA="Industrial technology"
+		titleB="Engines and filters"
+		titleC="Industrial solutions"
 	/>
-	<SectionMapa />
+	<SectionMapa
+	title1="SERVICES"
+	title2="SUPPLIES"
+	text1="Add a short text here about the services, maximum 3 lines"
+	text2="Add a short paragraph here, maximum 3 lines, about the company's supplies"
+	text3="Industrial filters"
+	text4="Lorem ipsum lorem"
+	text5="Lorem ipsum lorem"
+	text6="Lorem ipsum lorem"
+	text7="Lorem ipsum lorem"
+	text8="Lorem ipsum lorem" />
 	<Form
-	title="Contact us"
-	text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, impedit!"
+	title="CONTACT US"
+	text="Leave us your message, and we will get in touch with you as soon as possible!"
 	name="Your name"
 	email="Your email"
-	textarea="Text a message"
+	textarea="Write a message"
 	button="Send" />
 	<Footer
 	title1="CONTACT US"
 	title2="MAP"
-	text1="EMAIL US" 
+	text1="EMAIL" 
 	/>
 </EnglishLayout>
 <script>
-	import "../script/mainMenu";
-	import "../script/ValidationForm"
+    import "../script/mainMenu";
+    import "../script/ValidationForm"
 </script>
