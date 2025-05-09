@@ -9,9 +9,7 @@ const {title1, text1} = Astro.props;
 		<div class="underline"></div>
 		<p>{text1}</p>
 	</div>
-	<div>
-		<img src={img.src} alt="#">
-  </div>
+	<img src={img.src} alt="#">
 </section>
 
 <style lang="scss">
@@ -22,12 +20,10 @@ const {title1, text1} = Astro.props;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		margin: 0 auto;
 		width: 100%;
 		max-width: 400px;
 		gap: 50px;
 		padding: 40px 0;
-
 
 		p{
 			margin-top: 20px;
@@ -49,6 +45,9 @@ const {title1, text1} = Astro.props;
 			max-width: 90%;
       margin: 0 auto;
 		}
+		img {
+			max-width: 300px;
+		}
 	}
 
 	@media (min-width: 1024px) {
@@ -56,6 +55,9 @@ const {title1, text1} = Astro.props;
 			flex-direction: row-reverse;
 			max-width: 80%;
 			margin: 0 5%;
+		}
+		img {
+			max-width: 500px;
 		}
 	}
 
