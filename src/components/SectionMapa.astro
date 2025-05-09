@@ -1,48 +1,48 @@
 ---
 import map from '../assets/image/mapa.png';
+const {title1, title2, text1, text2, text3, text4, text5, text6, text7, text8} = Astro.props;
 ---
 
-<section>
+<section id="services">
 	<div class="animated">
-			<h2>titulo1</h2>
+			<h2>{title1}</h2>
 			<div class="underline"></div>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-			Quisquam quas sit sapiente, accusantium repudiandae ut minima quis sint amet esse!</p>
+			<p>{text1}</p>
 	</div>
 	<img src={map.src} alt="#">
 </section>
 <figure>
 	<div>
-		<h2>titulo3</h2>
+		<h2>{title2}</h2>
 		<div class="underline"></div>
-		<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+		<p>{text2}</p>
   </div>
 	<div class="block-main">
 		<div class="block-content">
 			<i class="ph-fill ph-star"></i>
-			<p>aqui van un texto de prueba</p>
+			<p>{text3}</p>
 	  </div>
 		<div class="block-content">
 			<i class="ph-fill ph-star"></i>
-			<p>aqui van un texto de prueba</p>
+			<p>{text4}</p>
 		</div>
 		<div class="block-content">
 			<i class="ph-fill ph-star"></i>
-			<p>aqui van un texto de prueba</p>
+			<p>{text5}</p>
 		</div>
 	</div>
 	<div class="block-main">
 		<div class="block-content">
 			<i class="ph-fill ph-star"></i>
-			<p>aqui van un texto de prueba</p>
+			<p>{text6}</p>
 	  </div>
 		<div class="block-content">
 			<i class="ph-fill ph-star"></i>
-			<p>aqui van un texto de prueba</p>
+			<p>{text7}</p>
 		</div>
 		<div class="block-content">
 			<i class="ph-fill ph-star"></i>
-			<p>aqui van un texto de prueba</p>
+			<p>{text8}</p>
 		</div>
 	</div>
 </figure>

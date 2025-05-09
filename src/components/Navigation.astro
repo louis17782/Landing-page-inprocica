@@ -14,8 +14,8 @@ import logoA from "../assets/image/logo-a.png";
         <a href="/"><img class="logo" src={logo.src} alt="logo"></a> 
         <li><a href="#home" data-astro-prefetch>INICIO</a></li>
         <li><a href="#about" data-astro-prefetch>NOSOTROS</a></li>
-        <li><a href="#ivs" data-astro-prefetch>SERVICIOS</a></li>
-        <li><a href="#projects" data-astro-prefetch>PROYECTOS</a></li>
+        <li><a href="#services" data-astro-prefetch>SERVICIOS</a></li>
+        <li><a href="#supplies" data-astro-prefetch>SUMINISTROS</a></li>
         <li><a href="#contact" data-astro-prefetch>CONTACTO</a></li>
         <div class="content"> 
           <li><a id="language-toggle" href="/" data-astro-prefetch rel="noreferrer">EN</a></li>
@@ -138,6 +138,69 @@ import logoA from "../assets/image/logo-a.png";
 
   .logo {
     width: 200px;
+  }
+
+  @media (min-width: 768px) {
+    .nav-container {
+      position: relative;
+      height: 100%;
+      z-index: 99;
+      width: 100%;
+      top: 0;
+    }
+
+    nav {
+      position: fixed;
+      right: 0;
+      top: 0;
+      height: auto;
+      background-color: $black;
+      max-width: 100%;
+      margin: 0 auto;
+      z-index: 99;
+    }
+
+    .navlinks {
+      display: flex;
+      flex-direction: row;
+      height: 60px;
+      justify-content: space-around;
+      align-items: center;
+      text-decoration: none;
+      list-style: none;
+    }
+
+    .close-menu-container {
+      display: none;
+    }
+
+    .blur-background {
+      position: static; 
+      top: auto; 
+      left: auto; 
+      width: auto; 
+      height: auto; 
+      backdrop-filter: none;
+      background-color: transparent; 
+      opacity: 1; 
+      transition: none; 
+      z-index: auto; 
+      pointer-events: all; 
+    }
+
+    .nav-container {
+      position: relative;
+      top: 0;
+    }
+
+    .logo {
+      width: 100px;
+    }
+
+    .navlinks a {
+      font-size: 1rem;
+      margin-top: 0;
+    }
   }
 
   @media only screen and (min-width: 1024px) {

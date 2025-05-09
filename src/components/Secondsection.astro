@@ -1,13 +1,13 @@
 ---
 import img from '../assets/image/image5.webp';
+const {title1, text1} = Astro.props;
 ---
 
-<section>
+<section id="about">
 	<div class="animated">
-		<h2>titulo1</h2>
+		<h2>{title1}</h2>
 		<div class="underline"></div>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-			Quisquam quas sit sapiente, accusantium repudiandae ut minima quis sint amet esse!</p>
+		<p>{text1}</p>
 	</div>
 	<div>
 		<img src={img.src} alt="#">
