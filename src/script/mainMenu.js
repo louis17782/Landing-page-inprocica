@@ -1,42 +1,12 @@
 // Abrir menú y ocultar el botón de la hamburguesa
-document.querySelector('.menuOpen').addEventListener('click', () => {
-  const blurBackground = document.querySelector('.blur-background');
-  const nav = document.querySelector('nav');
-  const menuOpen = document.querySelector('.menuOpen');
-
-  blurBackground.classList.toggle('active');
-  nav.classList.toggle('active');
-
-  if (nav.classList.contains('active')) {
-    menuOpen.classList.add('hidden');
-  }
-});
-
 document.getElementById('close-menu').addEventListener('click', () => {
-  const blurBackground = document.querySelector('.blur-background');
-  const nav = document.querySelector('nav');
-  const menuOpen = document.querySelector('.menuOpen');
-
-  blurBackground.classList.remove('active');
-  nav.classList.remove('active');
-
-  menuOpen.classList.remove('hidden');
+  document.querySelector('.blur-background').classList.remove('active');
+  document.querySelector('nav').classList.remove('active');
 });
 
-// hover on projects
-
-const projects = document.querySelectorAll('.project');
-
-projects.forEach(project => {
-  project.addEventListener('mouseover', () => {
-    const content = project.querySelector('.content');
-    content.classList.add('show'); 
-  });
-
-  project.addEventListener('mouseout', () => {
-    const content = project.querySelector('.content');
-    content.classList.remove('show');
-  });
+document.querySelector('.menuOpen').addEventListener('click', () => {
+  document.querySelector('.blur-background').classList.toggle('active');
+  document.querySelector('nav').classList.toggle('active');
 });
 
 // Close menu after navigation 
